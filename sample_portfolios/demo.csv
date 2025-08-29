@@ -1,0 +1,1 @@
+'Symbol,Quantity`nTCS,5`nINFY,10' | Out-File -Encoding utf8 "sample_portfolios\demo.csv"
