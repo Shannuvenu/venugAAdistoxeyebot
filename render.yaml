@@ -1,0 +1,15 @@
+services:
+  - type: worker
+    name: venugAAdistoxeyebot
+    env: python
+    plan: free
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: python bot.py
+    autoDeploy: true
+    envVars:
+      - key: BOT_TOKEN
+        sync: false        # set in Render dashboard
+      - key: STOXEYE_URL
+        value: https://stoxeyeeee-zjlonjhaemcc8gdcemdf0o8.streamlit.app/
+      - key: CSV_DIR
+        value: sample_portfolios
